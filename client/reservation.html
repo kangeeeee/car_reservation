@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <link rel="stylesheet" type="text/css" href="reservationcss.css"> 
+    <meta charset="utf-8">
+    <title>Reservation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      #jb-container {
+        width: 820px;
+        margin: 40px auto;
+        padding: 1px;
+        border: 2px solid #bcbcbc;
+        border-color: #01A9DB;
+      }      #jb-header {
+        padding: 20px;
+        margin-bottom: 20px;
+        border: 1px solid #bcbcbc;
+      }
+        body{
+            background-image: url(backg7.png);
+             background-size: cover;
+		background-position: center top;
+		background-repeat:no-repeat;
+             
+        } 
+      @media ( max-width: 480px ) {
+        #jb-container {
+          width: auto;
+        }
+        #jb-content {
+          float: none;
+          width: auto;
+        }
+       
+      }
+    </style>
+  </head>
+  <body>
+ 
+    <div id="jb-container">
+      
+         
+       
+         <div class="form-style">
+            <form method="post" action="/reservation">
+                
+            <fieldset>
+		<pont style="color:white">
+                &ensp;이름 <input type="text" name="name" id="name" placeholder="예)홍길동">
+                &ensp;전화번호 <input type="text" name="phone" id="phone" placeholder="예)01027045973">
+                &ensp;차량번호 <input type="text" name="carnumber" id="carnumber" placeholder="예) 05버4439">
+                &ensp;비밀번호 <input type="password" name="password" id="password" placeholder="출차하실 때의 암호를 4자리로 입력해주세요." maxlength="4">
+                &ensp;입차일 <input type="datetime-local" name="intime" id="inttime"><br>
+                &ensp;출차일 <input type="datetime-local" name="outtime" id="outtime">
+                <input type="submit" value="예약하기"/>
+		</pont>
+            </fieldset>
+                 
+            </form>
+         
+             
+             
+        
+      </div>
+    </div>
+      
+  </body>
+</html>

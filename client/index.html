@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<title>Show chola brown</title> 
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet"> 
+	<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" /> 
+	<link type="text/css" rel="stylesheet" href="css/style.css" /> 
+    <script>
+        document.getElementById('intime').value= new Date().toISOString().slice(0, -1);
+    </script>
+</head>
+
+<body>
+	<div id="booking" class="section">
+		<div class="section-center">
+			<div class="container">
+				<div class="row">
+					<div class="booking-form">
+						<div class="form-header"><br><br>
+							<h1>Parking</h1>
+						</div>
+						<form method="post" action="/reservation"> 
+                            <div class="form-group">
+									<span class="form-label">성함</span>
+									<input class="form-control" type="text" name="name" id="name" placeholder="예)홍길동">
+								 
+ 
+							</div>
+							<div class="form-group">
+								<span class="form-label">전화번호</span>
+								<input class="form-control" type="text" name="phone" id="phone" placeholder="예)01027045973">
+							</div>
+							<div class="form-group">
+								<span class="form-label">차량번호</span>
+								<input class="form-control" type="text" name="carnumber" id="carnumber" placeholder="예) 05버4439">
+							</div>
+							<div class="form-group">
+								<span class="form-label">비밀번호</span>
+								<input class="form-control" type="password" name="password" id="password" maxlength="4" placeholder="출차하실 때의 암호를 4자리로 입력해주세요.">
+							</div>
+ 					 
+								<div class="form-group"> 
+								    <span class="form-label">입차일</span>
+									<input class="form-control" type="datetime-local" name="intime" id="intime" required>
+                                     
+                            </div>
+                                     
+                                <div class="form-group">
+                                            <span class="form-label">출차일</span>
+                                            <input class="form-control" type="datetime-local" name="outtime" id="outtime" required>
+                                </div> 
+
+							<div class="form-btn">
+								<button class="submit-btn">예약하기</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body> 
+
+</html>

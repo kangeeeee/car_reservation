@@ -1,0 +1,22 @@
+ <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-auth.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-firestore.js"></script>
+ 
+      <script> 
+                    var firebaseConfig = 
+                        {
+                            apiKey: '355fd1cc4fce4bf04f1e10fd924569c1797465b7',
+                            authDomain: 'https://accounts.google.com/o/oauth2/auth',
+                            projectId: 'parking-14a1f'
+                        };
+                    firebase.initializeApp(firebaseConfig);
+                    let docRef = db.collection('park').doc('p1');
+                    let add = docRef.set({
+                    user_name:name,
+                    phone_number:phone,
+                    car_number:carnumber,
+                    password: password,
+                    arrival_date: intime,
+                    depart_date : outtime
+                    });
+</script>

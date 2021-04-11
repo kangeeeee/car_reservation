@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+      
+    <meta charset="utf-8">
+    <title>Parking Reservation</title>
+      <link rel="stylesheet" href="button.css">
+      <link rel="stylesheet" href="indexcss.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+       body{
+            background-image: url(backg7.png);
+            background-size: cover;
+            background-position: center top;
+            background-repeat:no-repeat;
+            }
+        
+      #jb-container {
+        width: 1020px;
+        margin: 10px auto;
+        padding: 20px;
+        border: 1px solid #bcbcbc;
+        background : white;
+      }
+      #jb-header {
+        padding: 20px; 
+        margin-bottom: 20px;
+        border: 0px solid #bcbcbc;
+          background : white;
+      }
+      #jb-content {
+        width: 580px;
+        padding: 20px;
+        margin-bottom: 20px;
+        float: left;
+        border: 0px solid #bcbcbc;
+          background : white;
+      }
+      #jb-sidebar {
+        width: 260px;
+        padding: 20px;
+        margin-bottom: 20px;
+        float: right;
+        border: 1px solid #bcbcbc;
+          background : white;
+      }
+      #jb-footer {
+        clear: both;
+        padding: 20px;
+        border: 1px solid #bcbcbc;
+          background : white;
+      }
+        input.img-button{
+            background: url("empty.png") no-repeat;
+            border: none;
+            width: 350px;
+            height: 350px;
+                
+            cursor: pointer;
+        }
+      @media ( max-width: 480px ) {
+        #jb-container {
+          width: auto;
+        }
+        #jb-content {
+          float: none;
+          width: auto;
+        }
+        #jb-sidebar {
+          float: none;
+          width: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    
+    <div id="jb-container"> 
+      <div id="jb-header"> 
+            <img src="homelogo.png">  
+            <img src="bener.png" style="max-width: 100%;height:auto;"> 
+      </div>
+
+
+
+      <div id="jb-content">
+<!--        <h2>주차 예약 1.0.1</h2>-->
+          <form method="get" action="reservation.html">     
+              <button type="submit" class="fun-btn">쇼콜라브라우니 주차장 예약 바로가기</button>
+               
+          </form>
+         
+      </div>
+<!--
+      <div id="jb-sidebar">
+        <h2>공지사항</h2>
+        <ul>
+          <li>주차요금 안내</li>
+          <li>추석 요금 인상 안내</li>
+          <li>장기 고객 이벤트 안내</li>
+        </ul>
+      </div>
+-->
+      <div id="jb-footer">
+        <img src="copyright.png" style="max-width: 100%;height:auto;">
+      </div>
+    </div>
+  </body>
+</html>
