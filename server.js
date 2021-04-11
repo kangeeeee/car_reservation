@@ -4,7 +4,6 @@
 /*eslint-env node */
 
 var l = console.log;
-// var d = console.dir;
 var express = require('express');
 var app = express();
 var server = require('http').createServer(app);
@@ -45,11 +44,7 @@ app.post('/reservation', function(req, res)  // 예약 Post
     let outTime = outTimes[0] + ' ' + outTimes[1];
     
     try {
-        /*
-        connection.query(`INSERT INTO p1 (name, phone, carnumber, password, indate, outdate) VALUES ('${req.body.name}', ${req.body.phone}, '${req.body.carnumber}', ${req.body.password}, '${inTime}', '${outTime}');`);
-        //res.sendfile('./client/success.html');
-       res.redirect("http://113.198.234.53");
-        */
+         
 		connection.query("SELECT * FROM `p1` WHERE `parknum` != 0 ORDER BY `parknum` ASC",
 			function(err,arr){
             
@@ -80,24 +75,6 @@ app.post('/reservation', function(req, res)  // 예약 Post
                             j++
                             }
                         }                 
-//                        console.log('있음');
-//                        for(var i=0;i<4;i++){ 
-//                            if(arr[i]==undefined||(i+1)!=arr[i].parknum){
-//                                console.log('정상');
-//                                connection.query(`INSERT INTO p1 (name, phone, carnumber, password, indate, outdate,parknum) VALUES ('${req.body.name}', ${req.body.phone}, '${req.body.carnumber}', ${req.body.password}, '${inTime}', '${outTime}', ${i+1} );`);
-//                                res.redirect("success.html");
-//                                return true;
-//                            }                  
-//                            else if(i==3){
-//                                console.log('만들수없음');
-//                                 JSAlert.alert("예약이 꽉 차서 불가능합니다.")
-////                                res.redirect("fail.html");
-//                            }
-//                            else{
-//                                console.log('비정상');
-//                            }
-//
-//                        }
                     
 		});
     } catch(error) {
@@ -119,7 +96,4 @@ function intervalFunc() {
 }
 
 
-/*
-app.all('*', function(req, res) {
-    res.redirect('/');
-});*/
+ 
